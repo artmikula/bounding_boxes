@@ -1,0 +1,72 @@
+version: '3.9'
+
+services:
+
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    container_name: ext-baekgok_db
+    volumes:
+      - ~/apps/baekgok_db:/var/lib/mysql
+      - "./setup.sql:/docker-entrypoint-initdb.d/setup.sql"
+    environment:
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=pass123
+      - MYSQL_DATABASE=baekgok_db
+      - MYSQL_ROOT_PASSWORD=pswd
+      - TZ="Asia/Seoul"
+
+  nginx:
+    depends_on:
+      - server
+      - ui
+      - api
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./Nginx
+    ports:
+      - "58119:80"
+    container_name: ext-baekgok_proxy
+
+  server:
+    build:
+      dockerfile: Dockerfile
+      context: "./server"
+    depends_on:
+      - mariadb
+    volumes:
+      - /app/node_modules
+      - ./server:/app
+    environment:
+      MYSQL_HOST_IP: mariadb
+    container_name: ext-baekgok_server
+
+  ui:
+    stdin_open: true
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    build:
+      dockerfile: Dockerfile
+      context: ./ui
+    volumes:
+      - /app/node_modules
+      - ./ui:/app
+    container_name: ext-baekgok_ui
+
+  api:
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: "../api"
+    volumes:
+      - /app/apps
+      - ./api:/app
+    container_name: ext-baekgok_api
+     
+networks:
+  default:
+    external:
+      name: baekgok_default
+      
+

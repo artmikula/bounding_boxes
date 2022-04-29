@@ -1,0 +1,473 @@
+
+.App {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  width: 65%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1%;
+}
+
+nav h2 {
+  color: black;
+}
+
+h2 {
+  color: grey;
+}
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+  margin: 6px 0;
+}
+
+.mainCont {
+  min-height: 65vh;
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1%;
+  overflow: visible;
+}
+
+#loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#loginform input[type="button"] {
+  margin: 5px;
+  border: none;
+  padding: 5px;
+  width: 100px;
+  color: white;
+  /* background-color: #2ecc71; */
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+#loginform input[type="button"]:hover {
+  background-color: #F39C12;
+}
+
+#username,
+#password,
+#rePassword {
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  outline: 1px solid grey;
+}
+
+#fileUpload button,
+.button3 {
+  height: 40px;
+  border: none;
+  min-width: 100px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+#fileUpload button:hover,
+.button3:hover {
+  background-color: rgb(209, 209, 209);
+  cursor: pointer;
+}
+
+#fileUpload input {
+  outline: 1px solid grey;
+  cursor: pointer;
+}
+
+
+
+#topRight {
+  height: 100%;
+  /* width: 20%; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.error h2 {
+  color: red;
+}
+.error {
+  color: red;
+  text-align: center;
+}
+
+.signupCont {
+  height: 400px;
+  width: 300px;
+}
+
+.signup {
+  outline: 1px solid grey;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 10px 15px 4px rgba(0, 0, 0, 0.28);
+}
+
+.login {
+  min-height: 200px;
+  min-width: 400px;
+  outline: 1px solid black;
+  box-shadow: 5px 10px 15px 4px rgba(0, 0, 0, 0.28);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+#signupForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#signupForm input {
+  margin: 10px;
+}
+
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.buttons {
+  margin: 10px;
+}
+
+
+.left,
+.middle {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.image,
+.result {
+  max-height: 250px;
+  max-width: 250px;
+}
+
+
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  /* margin: auto; */
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.file-upload {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#userIcon {
+  width: 100px;
+  height: 100px;
+}
+
+#cow_img {
+  height: 50px;
+}
+
+#uploadedImage {
+  object-fit: contain;
+  min-height: 50vh;
+  overflow: scroll;
+  position: relative;
+  height: 60vh;
+  width: 80vw;
+  margin: 20px;
+}
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.App {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav {
+  width: 100%;
+  max-width: 1000px;
+  min-width: 600px;
+  height: 60px;
+  background-color: #3498db;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hamburger {
+  display: inline-block;
+  cursor: pointer;
+  margin: 1em;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 4px;
+  /* background-color: #fff; */
+  margin: 6px 0;
+}
+
+.mainCont {
+  min-height: 50vh;
+  min-width: 1000px;
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+#loginform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+#username,
+#password,
+#rePassword {
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  outline: 1px solid grey;
+  min-width: 250px;
+}
+
+.error h2 {
+  color: red;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+.signup {
+  outline: 1px solid grey;
+  min-height: 300px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 10px 15px 4px rgba(0, 0, 0, 0.28);
+  padding: 10px;
+}
+
+.singup input {
+  background-color: #2774a7;
+}
+
+.login {
+  min-height: 300px;
+  width: 300px;
+  outline: 1px solid black;
+  box-shadow: 5px 10px 15px 4px rgba(0, 0, 0, 0.28);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 20px;
+}
+
+#signupForm {
+  display: flex;
+  flex-direction: column;
+}
+
+#signupForm input {
+  margin: 10px;
+}
+
+.buttons {
+  margin: 10px;
+}
+
+#topRight {
+  display: flex;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 1000px) {
+  .charts {
+    flex-direction: column;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.box {
+  outline: 2px solid grey;
+  padding: 30px;
+  top: 30%;
+  position: relative;
+  width: 350px;
+  margin: 0 auto;
+  height: 350px;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #ededed;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.2em;
+  overflow: hidden;
+}
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.button2 {
+  margin: 5px;
+  border: none;
+  padding: 5px;
+  min-width: 100px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1em;
+  border-radius: 5px;
+  background-color: #33719b;
+}
+
+.button2:hover {
+  background-color: #F39C12;
+  color: white;
+  cursor: pointer;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+#div002, #div001 {
+  position: relative;
+}

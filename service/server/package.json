@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "mariadb": "^2.5.5"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
